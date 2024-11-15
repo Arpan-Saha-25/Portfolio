@@ -233,17 +233,9 @@ section {
 }
 
 .typing-text span::before {
-    content: 'Software Developer';
+    content: 'CS Student ! ';
     color: var(-- main-color);
     animation: words 20s infinite;
-
-    /* new */
-    /* content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
 }
 
 .typing-text span::after {
@@ -277,27 +269,27 @@ section {
 
     0%,
     20% {
-        content: 'Web Developer ';
+        content: 'CS Student ! ';
     }
 
     21%,
     40% {
-        content: 'Software Developer ';
+        content: 'Software Developer ! ';
     }
 
     41%,
     60% {
-        content: 'Web Designer ';
+        content: 'Full Stack Developer ! ';
     }
 
     61%,
     80% {
-        content: 'Photographer ';
+        content: 'Photographer ! ';
     }
 
     81%,
     100% {
-        content: 'CS Student ';
+        content: 'Web Developer ! ';
     }
 }
 
@@ -358,7 +350,6 @@ section {
 }
 
 /* service secction */
-
 .services {
     background: var(--second-bg-color);
 }
@@ -548,6 +539,9 @@ section {
 
 .education .container::after {
     content: '\f501';
+    /* "\e63b"; */
+    /* "\f19d"; */
+    /* '\f501'; */
     position: absolute;
     width: 25px;
     height: 25px;
@@ -560,7 +554,8 @@ section {
     z-index: 100;
     font-size: 1.89rem;
     text-align: center;
-    font-family: "Font Awesome\ 5 Free";
+    /* Font Awesome 5 Free */
+    font-family: "Font Awesome 5 Free";
     color: rgb(90, 64, 64);
 }
 
@@ -572,6 +567,7 @@ section {
     left: 50%;
 }
 
+/* Arrow symbol in Education Section */
 .education .left::before {
     content: "";
     height: 0;
@@ -592,7 +588,7 @@ section {
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    left: 30px;
     border: medium solid var(--main-color);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--main-color) transparent transparent;
@@ -603,7 +599,73 @@ section {
 }
 
 .education .content {
-    background: var();
+    background: var(--main-color);
     position: relative;
-    border-radius: ;
+    border-radius: 6px;
+}
+
+.education .content .tag {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.education .content .decs {
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.education .content .tag h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+}
+
+.education .content .decs p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+
+@media screen and (max-width:600px) {
+    .education .timeline {
+        margin-top: 2rem;
+    }
+
+    .education .timeline::after {
+        left: 31px;
+    }
+
+    .education .container {
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 2rem;
+    }
+
+    .education .container::after {
+        font-size: 2.2rem;
+    }
+
+    .education .container::before {
+        left: 61px;
+        border: medium solid var(--main-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--main-color) transparent transparent;
+    }
+
+    .education .left::after {
+        left: 15px;
+    }
+
+    .education .right::after {
+        left: 15px;
+    }
+
+    .education .right {
+        left: 0;
+    }
+
+
 }
