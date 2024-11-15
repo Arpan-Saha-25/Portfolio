@@ -222,6 +222,7 @@ section {
 }
 
 .typing-text {
+    /* border: 2px solid red; */
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
@@ -235,6 +236,14 @@ section {
     content: 'Software Developer';
     color: var(-- main-color);
     animation: words 20s infinite;
+
+    /* new */
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
 }
 
 .typing-text span::after {
@@ -244,13 +253,23 @@ section {
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid var(--bg-color);
-    right: -8;
+    /* right: -8; */
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+
+    width: 3px;
+    right: 0;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
-    to {
+
+    0%,
+    100% {
         border-left: 3px solid var(--main-color);
+    }
+
+    50% {
+        border-left: 3px solid transparent;
     }
 }
 
@@ -258,27 +277,27 @@ section {
 
     0%,
     20% {
-        content: 'Web Developer';
+        content: 'Web Developer ';
     }
 
     21%,
     40% {
-        content: 'Software Developer';
+        content: 'Software Developer ';
     }
 
     41%,
     60% {
-        content: 'Web Designer';
+        content: 'Web Designer ';
     }
 
     61%,
     80% {
-        content: 'Photographer';
+        content: 'Photographer ';
     }
 
     81%,
     100% {
-        content: 'Youtuber';
+        content: 'CS Student ';
     }
 }
 
@@ -309,6 +328,7 @@ section {
         width: calc(100% + 8px);
 
     }
+
 }
 
 @media (max-width:1000px) {
