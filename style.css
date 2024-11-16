@@ -619,13 +619,14 @@ section {
     font-size: 2rem;
     font-weight: 600;
     color: white;
-
 }
 
 .education .content .decs p {
+    padding-top: 2px;
+    padding-left: 3px;
     font-size: 1.3rem;
     font-weight: 500;
-    color: black;
+    color: antiquewhite;
 }
 
 
