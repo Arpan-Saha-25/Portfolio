@@ -1,8 +1,8 @@
 # 🌟 Portfolio README
 
 <div style="display: flex; justify-content: center; gap: 10px; align-items: center;">
-    <img src="./assets/gif/desktop.gif" alt="Desktop screen" height="200px" style="object-fit: contain;" />
-    <img src="./assets/gif/mobile.gif" alt="Mobile Screen" height="200px" style="object-fit: contain;" />
+    <img src="./assets/gif/desktop.gif" alt="Desktop screen" height="260px" style="object-fit: contain;" />
+    <img src="./assets/gif/mobile.gif" alt="Mobile Screen" height="260px" style="object-fit: contain;" />
 </div>
 
 ## 🌐 Overview  
