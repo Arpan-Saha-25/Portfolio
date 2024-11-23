@@ -226,31 +226,38 @@ section {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+
+    display: inline-block;
+    position: relative;
 }
 
 .typing-text span {
     position: relative;
+
+    display: inline-block;
 }
 
 .typing-text span::before {
     content: 'CS Student ! ';
     color: var(-- main-color);
-    animation: words 20s infinite;
+    animation: words 20s infinite, typing 20s steps(14) infinite;
 }
 
 .typing-text span::after {
     content: '';
     background: var(--bg-color);
     position: absolute;
-    width: calc(100% + 8px);
+    width: 3px;
     height: 100%;
     border-left: 3px solid var(--bg-color);
-    /* right: -8; */
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-
-    width: 3px;
+    top: 0;
     right: 0;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    /* width: calc(100% + 8px); */
+    /* right: -8; */
+    /* width: 3px;
+    right: 0;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite; */
 }
 
 @keyframes cursor {
@@ -317,7 +324,8 @@ section {
     65%,
     80%,
     85% {
-        width: calc(100% + 8px);
+        /* width: calc(100% + 8px);*/
+        width: 100%;
 
     }
 
@@ -349,7 +357,7 @@ section {
     }
 }
 
-/* service secction */
+/* service section */
 .service {
     background: var(--second-bg-color);
 }
@@ -487,7 +495,7 @@ section {
     margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 840px) {
     .skills .container {
         margin: 0;
         padding: 0;
@@ -506,8 +514,8 @@ section {
     }
 }
 
-/* education section  */
 
+/* education section  */
 .education {
     background: var(--second-bg-color);
 }
@@ -538,8 +546,13 @@ section {
 }
 
 .education .container::after {
+    /* Font Awesome 5 Free */
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: FontAwesome;
     content: '\f501';
-    /* "\e63b"; if not supported, use this*/
+    /* if not supported, use this */
+    /* "\f19d"; */
+    /* "\e63b"; */
     /* "\f19d"; */
     /* '\f501'; */
     position: absolute;
@@ -554,8 +567,6 @@ section {
     z-index: 100;
     font-size: 1.89rem;
     text-align: center;
-    /* Font Awesome 5 Free */
-    font-family: "Font Awesome 5 Free";
     color: rgb(90, 64, 64);
 }
 
